@@ -58,14 +58,14 @@
     "next-themes": "latest",
     "react-hook-form": "latest",
     "react-resizable-panels": "^2.1.7",
-    "react-tsparticles": "latest",
+    "@tsparticles/react": "^3.0.0",
     "recharts": "2.15.0",
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "latest",
     "tsparticles": "latest",
-    "tsparticles-engine": "latest",
+    "@tsparticles/engine": "^3.0.0",
     "zod": "latest"
   },
   "devDependencies": {
