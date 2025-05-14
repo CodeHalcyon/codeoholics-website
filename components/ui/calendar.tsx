@@ -2,22 +2,24 @@
 
 import * as React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import DayPicker from "react-day-picker";
+import DayPicker from "react-day-picker" // Correct import for v7
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
-export type CalendarProps = React.ComponentProps<typeof DayPicker>
+// Fallback CalendarProps type for v7
+export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+  className?: string
+  classNames?: any
+}
 
 function Calendar({
   className,
   classNames,
-  showOutsideDays = true,
   ...props
 }: CalendarProps) {
   return (
     <DayPicker
-      showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
@@ -61,6 +63,7 @@ function Calendar({
     />
   )
 }
+
 Calendar.displayName = "Calendar"
 
 export { Calendar }
